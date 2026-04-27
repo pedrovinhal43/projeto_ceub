@@ -1,2 +1,2 @@
 # Pedro França Vinhal
-# Introdução À Computação
+# Introdução à Computação
