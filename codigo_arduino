@@ -1,0 +1,20 @@
+void setup() {
+  pinMode(2, INPUT);    // Sensor de vaga
+  pinMode(8, OUTPUT);   // Luz Verde
+  pinMode(9, OUTPUT);   // Luz Vermelha
+}
+
+void loop() {
+  // Lê se o sensor detectou algo (carro)
+  int detectouCarro = digitalRead(2); 
+
+  if (detectouCarro == HIGH) { 
+    // Se tiver carro, acende a vermelha
+    digitalWrite(9, HIGH); 
+    digitalWrite(8, LOW);  
+  } else {
+    // Se estiver vazio, acende a verde
+    digitalWrite(9, LOW);  
+    digitalWrite(8, HIGH); 
+  }
+}
